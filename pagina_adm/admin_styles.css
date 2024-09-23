@@ -1,0 +1,168 @@
+:root{
+    --font-principal: 'Arial', sans-serif;
+    --cor-primaria: #ffffff;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.resource-list {
+    margin-bottom: 20px;
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fade-in 1s ease-in-out;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stats-section {
+    margin-bottom: 20px;
+}
+
+.cards-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.form-section, .sales-graph {
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--cor-terciaria);
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--cor-terciaria);
+}
+
+.sales-graph {
+    grid-column: span 2;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

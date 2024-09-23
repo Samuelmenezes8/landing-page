@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador - Indústrias Wayne</title>
+    <link rel="stylesheet" href="admin_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Painel de Administração - Indústrias Wayne</h1>
+        </header>
+
+        <section class="resource-list">
+            <h2>Lista de Produtos</h2>
+            <ul id="resourceList"></ul>
+        </section>
+
+        <div class="dashboard">
+            <section class="stats-section">
+                <h2>Estatísticas Gerais</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Total de Produtos</h3>
+                        <p><strong id="totalProdutos">0</strong></p>
+                    </div>
+                    <div class="card">
+                        <h3>Produtos em Estoque</h3>
+                        <p><strong id="produtosEstoque">0</strong></p>
+                    </div>
+                    <div class="card">
+                        <h3>Movimentação de Vendas</h3>
+                        <p><strong id="movVendas">R$ 0,00</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Gerenciar Produtos</h2>
+                <form id="resourceForm">
+                    <label for="resourceType">Tipo de Produto:</label>
+                    <select id="resourceType" required>
+                        <option value="equipamento">Equipamento</option>
+                        <option value="veiculo">Veículo</option>
+                        <option value="dispositivo">Dispositivo de Segurança</option>
+                    </select>
+
+                    <label for="resourceName">Nome do Produto:</label>
+                    <input type="text" id="resourceName" placeholder="Nome do Produto" required>
+
+                    <label for="resourceQuantity">Quantidade:</label>
+                    <input type="number" id="resourceQuantity" placeholder="Quantidade" required>
+
+                    <label for="resourcePrice">Preço Unitário:</label>
+                    <input type="number" id="resourcePrice" placeholder="Preço Unitário" required>
+
+                    <button type="submit" class="btn btn-save">Salvar Produto</button>
+                </form>
+            </section>
+
+            <section class="sales-graph">
+                <h2>Gráfico de Vendas</h2>
+                <canvas id="salesChart" width="400" height="200"></canvas>
+            </section>
+        </div>
+
+        <footer class="rodape">
+            <p>&copy; 2024 Indústrias Wayne - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="admin_script.js"></script>
+</body>
+</html>

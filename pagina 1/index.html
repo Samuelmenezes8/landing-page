@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Indústrias Wayne</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrias Wayner</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-container">
-    <h1>Acesso à Área Restrita</h1>
-    <form id="login-form">
-      <input type="text" id="username" placeholder="Usuário" required>
-      <input type="password" id="password" placeholder="Senha" required>
-      <button type="submit">Login</button>
-    </form>
-    <p id="error-msg" style="color: red;"></p>
 
-  </div>
-  
-  <script src="script.js"></script>
+        <div id="particles-js"></div> <!-- stats - count particles -->
+<div class="count-particles"> <span class="js-count-particles"></span></div> 
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+
+        <div class="login-container">
+            <div class="avatar">
+                <img src="image.png" alt="Avatar">
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/new-post.png" alt="Email Icon">
+                    <input type="email" id="email" placeholder="Email ID" required>
+                </div>
+                <div class="input-group">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/lock.png" alt="Password Icon">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <p id="errorMessage" style="color: red;"></p>
+                <button type="button" class="login-btn" id="loginBtn">Login</button>
+            </form>
+        </div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

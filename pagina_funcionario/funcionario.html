@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página dos Funcionários - Indústrias Wayne</title>
+    <link rel="stylesheet" href="funcionario_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Seja Bem-vindo</h1>
+            <h2>É um prazer ter você como um funcionario das Indústrias Wayne</h2>
+        </header>
+
+        <!-- Sessão de Notificações -->
+        <section id="notifications" class="notification-section">
+            <div id="notificationMessage" class="notification hidden">
+                <p>Seja bem vindo as Industrias Wayne</p>
+            </div>
+        </section>
+
+        <!-- Sessão de Informações sobre a Empresa -->
+        <section class="company-info">
+            <h2>Sobre a Empresa</h2>
+            <p>A Indústrias Wayne é uma líder global em inovação tecnológica, especializada em soluções de segurança, automóveis de alta performance, e desenvolvimento de dispositivos para a defesa e o setor público. Com mais de 80 anos de história, nossa missão é fornecer produtos de qualidade excepcional para o avanço da humanidade e a proteção das cidades em que atuamos.</p>
+        </section>
+
+        <!-- Sessão de Produtos e Projetos -->
+        <section class="products-section">
+            <h2>Produtos em Desenvolvimento</h2>
+            <div class="products-grid">
+                <div class="product">
+                    <h3>Veículo Autônomo W1</h3>
+                    <p>O W1 é o primeiro veículo 100% autônomo da Wayne, equipado com inteligência artificial de última geração para segurança e performance incomparáveis.</p>
+                </div>
+                <div class="product">
+                    <h3>Dispositivo de Segurança Ultra-Sonic</h3>
+                    <p>Nosso dispositivo de segurança de ultra-som oferece proteção contra invasores indetectáveis, com sensores sensíveis para monitoramento em tempo real.</p>
+                </div>
+                <div class="product">
+                    <h3>Armadura Defensiva T-800</h3>
+                    <p>A armadura T-800 foi projetada para forças militares e táticas, proporcionando defesa completa em situações extremas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão de Projetos em Andamento -->
+        <section class="projects-section">
+            <h2>Projetos em Andamento</h2>
+            <div class="projects-list">
+                <div class="project">
+                    <h3>Revisão de Inventário</h3>
+                    <p>Status: Em Progresso</p>
+                    <p id="projectDetail1" class="hidden">O departamento de inventário está revisando os equipamentos para garantir que tudo esteja atualizado e funcionando corretamente.</p>
+                    <button onclick="toggleProjectDetails(1)">Ver Mais</button>
+                </div>
+                <div class="project">
+                    <h3>Desenvolvimento do Veículo Elétrico Wayne E2</h3>
+                    <p>Status: Em Progresso</p>
+                    <p id="projectDetail2" class="hidden">A Wayne está trabalhando em um novo modelo de veículo elétrico de alta performance, com lançamento previsto para o próximo ano.</p>
+                    <button onclick="toggleProjectDetails(2)">Ver Mais</button>
+                </div>
+                <div class="project">
+                    <h3>Atualização de Dispositivos de Segurança</h3>
+                    <p>Status: Completo</p>
+                    <p id="projectDetail3" class="hidden">Recentemente concluímos a atualização de todos os dispositivos de segurança de última geração para nossos clientes.</p>
+                    <button onclick="toggleProjectDetails(3)">Ver Mais</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão de Resultados da Empresa -->
+        <section class="results-section">
+            <h2>Resultados Recentes</h2>
+            <p><strong>Lucro Trimestral:</strong> $5.8 bilhões</p>
+            <p><strong>Funcionários Ativos:</strong> 12.000</p>
+            <p><strong>Projetos Concluídos no Ano:</strong> 45</p>
+        </section>
+
+        <footer>
+            <p>Indústrias Wayne - Todos os direitos reservados © 2024</p>
+        </footer>
+    </div>
+
+    <!-- Arquivo de JavaScript -->
+    <script src="funcionario.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Gerente - Indústrias Wayne</title>
+    <link rel="stylesheet" href="gerente_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Painel do Gerente</h1>
+        <h2>Bem-vindo ao painel de controle das Indústrias Wayne</h2>
+    </header>
+
+    <div class="container">
+        <!-- Notificação de atualização -->
+        <div id="notificationMessage" class="notification hidden"></div>
+
+        <!-- Sessão de visão geral da empresa -->
+        <section class="overview-section">
+            <h2>Visão Geral da Empresa</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Total de Funcionários</h3>
+                    <p><strong id="totalFuncionarios">200</strong></p>
+                </div>
+                <div class="card">
+                    <h3>Administração de Vendas</h3>
+                    <p>Último mês: <strong id="totalVendas">R$ 500,000</strong></p>
+                </div>
+                <div class="card">
+                    <h3>Lucros Totais</h3>
+                    <p>Último mês: <strong id="totalLucros">R$ 150,000</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela de funcionários -->
+        <section class="employees-section">
+            <h2>Funcionários</h2>
+            <table id="employeesTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Departamento</th>
+                        <th>Cargo</th>
+                        <th>Data de Admissão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>Vendas</td>
+                        <td>Analista de Vendas</td>
+                        <td>15/03/2021</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>TI</td>
+                        <td>Desenvolvedora Full Stack</td>
+                        <td>22/07/2020</td>
+                    </tr>
+                    <!-- Adicione mais funcionários conforme necessário -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Gráfico de vendas -->
+        <section class="sales-section">
+            <h2>Administração de Vendas</h2>
+            <canvas id="salesChart" width="400" height="200"></canvas>
+        </section>
+
+        <!-- Gráfico de Lucros -->
+        <section class="profits-section">
+            <h2>Lucros da Empresa</h2>
+            <canvas id="profitsChart" width="400" height="200"></canvas>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Indústrias Wayne - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="gerente.js"></script>
+</body>
+</html>
