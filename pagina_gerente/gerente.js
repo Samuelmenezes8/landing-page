@@ -117,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
 //A simulação de atualizações automáticas foi implementada para melhorar a experiência do gerente, que poderá ver notificações sobre novos funcionários, vendas ou lucros diretamente no painel.
 
 //Resultado:

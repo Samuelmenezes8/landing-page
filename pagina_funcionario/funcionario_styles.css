@@ -1,107 +1,12 @@
-/* body {
-    font-family: Arial, sans-serif;
-    background-color: #e9ecef;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-header {
-    background-color: #343a40;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.employee-info, .status-section, .updates-section {
-    margin-top: 30px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #343a40;
-    font-size: 20px;
-}
-
-p {
-    font-size: 16px;
-    color: #555;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-ul li:last-child {
-    border-bottom: none;
-}
-
-strong {
-    color: #007bff;
-}
-
-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #343a40;
-    color: white;
-    font-size: 14px;
-}
-
-
-.hidden {
-    display: none;
-}
-
-.notification {
-    background-color: #ffdf91;
-    color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.notification.hidden {
-    display: none;
-} */
-
-
-/* Reset de margin e padding para garantir uniformidade */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos para o corpo da página */
+/* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container centralizado */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -110,235 +15,106 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #000000;
-    color: #fff;
     text-align: center;
-    padding: 40px 0;
-    border-radius: 10px;
+    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
 }
 
 header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 header h2 {
     font-size: 24px;
-    font-weight: normal;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #bbb;
 }
 
-/* Sessão de Notificações */
-.notification-section {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ffebc2;
-    border: 1px solid #e0c785;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.notification.hidden {
-    display: none;
-}
-
-/* Informações sobre a Empresa */
-.company-info {
-    background-color: #fff;
-    padding: 30px;
-    margin-top: 20px;
+/* Seções */
+section {
+    background-color: #292929;
+    padding: 40px;
+    margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.company-info h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+h2 {
+    font-size: 32px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    color: #fff;
 }
 
-.company-info p {
+p {
     font-size: 18px;
-    line-height: 1.8;
+    color: #d4d4d4;
+    line-height: 1.6;
 }
 
-/* Sessão de Produtos */
-.products-section {
-    margin-top: 30px;
-}
-
-.products-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
+/* Seção de Produtos */
 .products-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: space-around;
 }
 
 .product {
-    background-color: #fff;
+    background-color: #202020;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-basis: 30%;
     text-align: center;
+    border: 1px solid #444;
 }
 
 .product h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .product p {
-    font-size: 16px;
-    color: #666;
+    color: #bbb;
 }
 
-/* Sessão de Projetos */
-.projects-section {
-    margin-top: 40px;
+/* Estilos para divs escondidas */
+.extra-info {
+    display: none;
+    margin-top: 10px;
+    color: #d4d4d4;
 }
 
-.projects-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.project {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-basis: 30%;
-    text-align: center;
-}
-
-.project h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.project p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.project button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #000000;
-    color: white;
+button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.project button:hover {
-    background-color: #303233;
+button:hover {
+    background-color: #666;
 }
 
-/* Sessão de Resultados */
-.results-section {
-    margin-top: 40px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Animação de expansão */
+.expand {
+    display: block;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
 }
 
-.results-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
+.collapse {
+    max-height: 0;
+    transition: max-height 0.5s ease-in;
 }
 
-.results-section p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.results-section p strong {
-    color: #003366;
-}
-
-/* Rodapé */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    color: #fff;
-    border-radius: 5px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* Botão de Notificação */
-#notificationMessage {
-    padding: 15px;
-    /* background-color: #100931; */
-    color: #333;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    display: none;
-}
-
-/* Animação de fade-in */
-.fade-in {
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Animação de fade-out */
-.fade-out {
-    animation: fadeOut 0.5s forwards;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-/* Animação de slide-in para notificações */
-.slide-in {
-    animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer{
+    display: flex;
+    justify-content: center;
 }

@@ -17,6 +17,12 @@
             <ul id="resourceList"></ul>
         </section>
 
+        <section class="revenue-section">
+            <h2>Total de Faturamento</h2>
+            <p><strong id="totalRevenue">R$ 0,00</strong></p>
+        </section>
+        
+
         <div class="dashboard">
             <section class="stats-section">
                 <h2>Estatísticas Gerais</h2>
@@ -32,6 +38,10 @@
                     <div class="card">
                         <h3>Movimentação de Vendas</h3>
                         <p><strong id="movVendas">R$ 0,00</strong></p>
+                    </div>
+                    <div class="card">
+                        <h3>Produtos Vendidos</h3>
+                        <p><strong id="produtosVendidos">0</strong></p>
                     </div>
                 </div>
             </section>
@@ -59,10 +69,8 @@
                 </form>
             </section>
 
-            <section class="sales-graph">
-                <h2>Gráfico de Vendas</h2>
-                <canvas id="salesChart" width="400" height="200"></canvas>
-            </section>
+
+            
         </div>
 
         <footer class="rodape">

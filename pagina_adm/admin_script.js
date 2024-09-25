@@ -2,14 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const resourceForm = document.getElementById('resourceForm');
     const resourceList = document.getElementById('resourceList');
     let resources = JSON.parse(localStorage.getItem('resources')) || [];
+    let totalProdutosVendidos = 0;  // Variável para armazenar a quantidade de produtos vendidos
 
     function renderResources() {
         resourceList.innerHTML = '';
         let totalProdutos = 0;
         let produtosEstoque = 0;
+        let totalRevenue = 0; // Variável para armazenar o faturamento total
+        totalProdutosVendidos = 0; // Reseta o valor a cada chamada
+
         resources.forEach((resource, index) => {
             totalProdutos += 1;
             produtosEstoque += parseInt(resource.quantity);
+            totalRevenue += resource.quantity * resource.price; // Cálculo do faturamento
+
+            // Para simular a venda de produtos, suponha que metade de cada produto foi vendido
+            const produtosVendidosPorProduto = Math.floor(resource.quantity / 2);
+            totalProdutosVendidos += produtosVendidosPorProduto; // Soma a quantidade vendida
 
             const li = document.createElement('li');
             li.classList.add('fade-in');
@@ -27,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById('totalProdutos').textContent = totalProdutos;
         document.getElementById('produtosEstoque').textContent = produtosEstoque;
+        document.getElementById('totalRevenue').textContent = `R$ ${totalRevenue.toFixed(2)}`;
+        document.getElementById('produtosVendidos').textContent = totalProdutosVendidos; // Atualiza o total de produtos vendidos
 
         localStorage.setItem('resources', JSON.stringify(resources));
     }
@@ -71,32 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
         renderResources();
     };
 
-    // Gráfico de vendas
-    const ctx = document.getElementById('salesChart').getContext('2d');
-    const salesChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-            datasets: [{
-                label: 'Movimentação de Vendas',
-                data: [500, 1000, 750, 1500, 2000, 2500],
-                backgroundColor: 'rgba(0, 123, 255, 0.5)',
-                borderColor: '#007bff',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
     renderResources();
 });
+
+
 
 
 
