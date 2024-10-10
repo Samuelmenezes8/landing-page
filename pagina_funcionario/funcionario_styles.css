@@ -114,6 +114,11 @@ button:hover {
     transition: max-height 0.5s ease-in;
 }
 
+.products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
 footer{
     display: flex;
     justify-content: center;

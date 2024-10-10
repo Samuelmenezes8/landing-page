@@ -1,0 +1,40 @@
+<!-- 
+ 
+O projeto apresentado é um sistema de gerenciamento de segurança desenvolvido para as Indústrias Wayne, com foco na autenticação de usuários e controle de acesso. Ele oferece diferentes níveis de permissões e redireciona os usuários para páginas específicas de acordo com seu papel dentro da empresa.
+
+1. Objetivo do Sistema
+O principal objetivo do sistema é garantir que somente funcionários autorizados possam acessar determinadas áreas e funcionalidades da plataforma. O sistema categoriza os usuários em três diferentes papéis:
+
+Funcionário: Acesso restrito às funções básicas e informações relacionadas às suas atividades.
+Gerente: Acesso a funções administrativas, permitindo o controle de equipes e visualização de relatórios mais detalhados.
+Administrador: Acesso completo ao sistema, incluindo a gestão de usuários, recursos e configurações globais.
+
+2. Interface de Login
+A primeira página do sistema é a interface de login, que foi projetada com uma abordagem intuitiva e moderna:
+
+Design Responsivo: O layout se adapta a diferentes dispositivos, graças ao uso de CSS responsivo.
+Efeitos Visuais Avançados: A página utiliza a biblioteca particles.js, que cria um efeito de partículas animadas no fundo, proporcionando uma experiência visual moderna e agradável para o usuário.
+Formulário de Login: O formulário de login é composto por campos de entrada para email e senha, com ícones ilustrativos, além de um botão de login que verifica as credenciais do usuário.
+
+3. Funcionamento do Sistema
+Após inserir o email e senha, o sistema verifica as credenciais comparando-as com uma lista de usuários predefinidos no código. Cada usuário tem um papel específico e, caso o login seja bem-sucedido, o sistema redireciona o usuário para a página correspondente ao seu perfil:
+
+Funcionário: Redirecionado para a página exclusiva de funcionário.
+Gerente: Redirecionado para a página de gerente.
+Administrador: Redirecionado para a página de administrador.
+Caso o login seja mal-sucedido, o sistema exibe uma mensagem de erro informando o usuário, e o número de tentativas restantes é decrementado. Após três tentativas incorretas, a conta do usuário é temporariamente bloqueada.
+
+4. Segurança
+O sistema implementa uma medida básica de segurança ao limitar as tentativas de login, bloqueando o usuário após três tentativas incorretas. Isso previne ataques de força bruta.
+
+5. Efeitos Visuais
+O uso da biblioteca particles.js adiciona um efeito dinâmico ao fundo da página, com partículas interativas que reagem ao movimento do cursor, criando uma experiência visualmente interessante sem comprometer a funcionalidade.
+
+6. Estrutura de Código
+O projeto é dividido em três principais componentes:
+
+HTML: Responsável pela estrutura da interface e integração com os scripts JavaScript e estilos CSS.
+CSS: Responsável pelo estilo da página, incluindo a formatação do layout, paleta de cores e design responsivo.
+JavaScript: Gerencia a lógica de autenticação e redirecionamento, além de controlar os efeitos visuais através do particles.js.
+7. Extensibilidade
+O sistema foi construído com a intenção de ser extensível, permitindo que novos usuários, papéis e páginas possam ser facilmente adicionados conforme necessário, tornando-o escalável para o futuro. -->
